@@ -1,0 +1,51 @@
+
+
+<table class="table">
+
+
+
+  <thead>
+    <tr>
+      <th scope="col">id </th>
+      <th scope="col">name </th>
+      <th scope="col">quantity </th>
+      <th scope="col">price</th>
+      <th scope="col">remove</th>
+
+
+
+    </tr>
+  </thead>
+  <tbody *ngFor = "let i of carttemp;let in = index">
+    <tr>
+      <td>{{i.id}} </td>
+      <td>{{i.name}}</td>
+      <td>{{i.quantity}} <button class="btn btn-success"  (click)="add(in)"> Add </button> </td>
+      <td>{{i.price}}</td>
+      <td scope="col"><button  class="btn btn-danger"  (click)=remove(i.id)>remove</button></td>
+
+    </tr>
+    <!-- <button class="btn btn-primary" (click)=removeall()>remove all</button> -->
+  </tbody>
+  <!-- <tr>
+    <td>test </td>
+    <td>test 1</td>
+    <td>test 2 </td>
+  </tr> -->
+  <!-- <tbody>
+
+    <tr *ngFor="let i of cartitem;"> -->
+      <!-- <div *ngFor ="let j of cartitem[0]"> -->
+       <!-- <th scope="row"></th> -->
+      <!-- <td>{{i.id}}</td>
+      <td>
+      </td>
+      <td>test  </td>
+
+    </tr>
+
+  </tbody> -->
+
+</table>
+
+
